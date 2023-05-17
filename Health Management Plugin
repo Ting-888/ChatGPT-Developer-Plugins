@@ -1,0 +1,63 @@
+const GPT = require("chatgpt");
+
+const healthManagementPlugin = {
+  name: "Health Management Plugin",
+  description: "A plugin that can help patients manage their health",
+  commands: [
+    {
+      name: "setAppointment",
+      description: "Set a reminder for an appointment",
+      parameters: [
+        {
+          name: "appointmentDate",
+          description: "The date of the appointment",
+          type: "string",
+        },
+        {
+          name: "appointmentTime",
+          description: "The time of the appointment",
+          type: "string",
+        },
+        {
+          name: "appointmentLocation",
+          description: "The location of the appointment",
+          type: "string",
+        },
+      ],
+    },
+    {
+      name: "trackSymptoms",
+      description: "Track your symptoms",
+      parameters: [
+        {
+          name: "symptom",
+          description: "The symptom you are experiencing",
+          type: "string",
+        },
+        {
+          name: "severity",
+          description: "The severity of the symptom",
+          type: "number",
+        },
+        {
+          name: "date",
+          description: "The date the symptom started",
+          type: "string",
+        },
+      ],
+    },
+    {
+      name: "getHealthResources",
+      description: "Get access to health resources",
+      parameters: [
+        {
+          name: "resourceType",
+          description: "The type of health resource you are looking for",
+          type: "string",
+        },
+      ],
+    },
+  ],
+};
+
+module.exports = healthManagementPlugin;
